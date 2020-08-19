@@ -1,0 +1,106 @@
+package graphics_zel;
+
+import java.awt.*;
+
+public class Graphics_zel extends Panel {
+    public Graphics_zel() {
+    this.setBackground(Color.BLACK);
+    }
+    @Override
+    public void paint(Graphics g){
+        //g.setColor(Color.WHITE);
+        //g.drawLine(0,getHeight()/2, getWidth(), getHeight()/2);
+        //g.setColor(Color.WHITE);
+        //g.drawLine(getWidth()/2, 0, getWidth()/2, getHeight());
+        
+        //hair
+        g.setColor(new Color(190, 30, 125));
+        g.fillOval(280, 0, 240, 240);
+        g.setColor(Color.WHITE);
+        g.fillArc(325, 62, 150, 85, 360, 180);
+        g.setColor(new Color(225, 28, 125));
+        g.fillOval(280, 80, 240, 240);
+        
+        //body
+        g.setColor(Color.WHITE);
+        int[] x = {330, 470, 400};
+        int[] y = {400, 400, 200};
+        g.fillPolygon(x, y, 3);
+        g.setColor(new Color(219, 154, 88));
+        g.fillOval(370, 260, 60, 50);
+        
+        //ears
+        g.setColor(new Color(219, 154, 88));
+        g.fillOval(270, 150, 60, 70);
+        g.setColor(new Color(219, 154, 88));
+        g.fillOval(470, 150, 60, 70);
+        
+        
+        //head
+        g.setColor(new Color(223, 162, 101));
+        g.fillOval(300, 100, 200, 200);
+        g.setColor(new Color(219, 143, 67));
+        g.fillArc(385, 200, 30, 15, 360, 180);
+        
+        
+        //eyes(outline)
+        g.setColor(Color.WHITE);
+        g.fillOval(330, 140, 50, 50);
+        g.setColor(Color.WHITE);
+        g.fillOval(420, 140, 50, 50);
+        
+         //bangs
+        g.setColor(new Color(225, 28, 125));
+        g.fillArc(330, 80, 143, 130, 360, 180);
+        
+        //wink
+        //g.setColor(Color.BLACK);
+        //g.fillArc(410, 160, 60, 30, 360, 180);
+        
+        //eyes
+        g.setColor(new Color(109, 49, 5));
+        g.fillOval(340, 150, 30, 30);
+        g.setColor(new Color(109, 49, 5));
+        g.fillOval(430, 150, 30, 30);
+        
+        g.setColor(Color.WHITE);
+        g.fillRect(340, 150, 12, 12);
+        g.setColor(Color.WHITE);
+        g.fillRect(430, 150, 12, 12);
+        
+        //pupil
+        g.setColor(Color.BLACK);
+        g.fillOval(350, 160, 12, 12);
+        g.setColor(Color.BLACK);
+        g.fillOval(440, 160, 12, 12);
+        g.setColor(Color.WHITE);
+        g.fillOval(355, 170, 5, 5);
+        g.setColor(Color.WHITE);
+        g.fillOval(445, 170, 5, 5);
+               
+        //mouth
+        g.setColor(new Color(128, 4, 18));
+        g.fillArc(350, 170, 100, 100, 180, 180);
+        g.setColor(Color.red);
+        g.fillOval(370, 240, 60, 30);
+        
+        g.setColor(Color.red);
+        g.setFont(new Font("Chiller",Font.BOLD,40));
+        g.drawString("YOU are one of the", 20, 60);
+        g.setFont(new Font("Chiller",Font.BOLD,40));
+        g.drawString("REASON", 95, 100);
+        g.setFont(new Font("Chiller",Font.BOLD,40));
+        g.drawString("why I SMILE.", 70,140);
+    }
+    
+   public static void main(String args[]){
+       Graphics_zel panel = new Graphics_zel();
+       Frame zel = new Frame();
+       zel.add(panel);
+       zel.setTitle("The Smile");
+       
+       zel.setBackground(Color.BLUE);
+       zel.setSize(800, 400);
+       zel.setVisible(true);
+   }
+}
